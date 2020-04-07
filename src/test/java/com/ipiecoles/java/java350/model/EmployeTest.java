@@ -7,6 +7,9 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import java.time.LocalDate;
 
+import static org.assertj.core.api.Assertions.*;
+
+
 public class EmployeTest extends Assertions {
 
     @Test
@@ -18,7 +21,8 @@ public class EmployeTest extends Assertions {
         // When
         Integer nbAnnees = employe.getNombreAnneeAnciennete();
         // Then
-        assertEquals(0, nbAnnees);
+//        assertEquals(0, nbAnnees);
+        assertThat(0).isEqualTo(nbAnnees);
     }
 
     @Test
@@ -30,7 +34,9 @@ public class EmployeTest extends Assertions {
         // When
         Integer nbAnnees = employe.getNombreAnneeAnciennete();
         // Then
-        assertEquals(2, nbAnnees);
+//        assertEquals(2, nbAnnees);
+        assertThat(2).isEqualTo(nbAnnees);
+
     }
 
     @Test
@@ -42,7 +48,8 @@ public class EmployeTest extends Assertions {
         // When
         Integer nbAnnees = employe.getNombreAnneeAnciennete();
         // Then
-        assertEquals(0,nbAnnees);
+//        assertEquals(0,nbAnnees);
+        assertThat(0).isEqualTo(nbAnnees);
     }
 
     @Test
@@ -55,7 +62,8 @@ public class EmployeTest extends Assertions {
         Integer anneeAnciennete = e.getNombreAnneeAnciennete();
 
         //Then
-        assertEquals(0, anneeAnciennete.intValue());
+//        assertEquals(0, anneeAnciennete.intValue());
+        assertThat(0).isEqualTo(anneeAnciennete.intValue());
 
     }
 
@@ -79,7 +87,9 @@ public class EmployeTest extends Assertions {
         Double prime = employe.getPrimeAnnuelle();
 
         //Then
-        Assertions.assertEquals(primeAnnuelle, prime);
+//        Assertions.assertEquals(primeAnnuelle, prime);
+        assertThat(primeAnnuelle).isEqualTo(prime);
+
 
     }
 }
